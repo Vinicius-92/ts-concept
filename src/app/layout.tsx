@@ -8,6 +8,8 @@ import Promos from "./components/promos";
 import Vans from "./components/vans";
 import About from "./components/about";
 import Marcas from "./components/marcas";
+import Lojas from "./components/lojas";
+import Scripts from "./components/scripts";
 
 const sairaRegular = localFont({
   src: "./fonts/SairaCondensed-Regular.ttf",
@@ -33,12 +35,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-ts-gray overflow-x-hidden">
       <body className={`${sairaRegular.variable} ${sairaBold.variable} antialiased`}>
+      <header>
+        <Scripts></Scripts>
+      </header>
       <Header></Header>
       <MainHeader></MainHeader>
       <Promos></Promos>
       <Vans></Vans>
       <About></About>
       <Marcas></Marcas>
+      <Lojas></Lojas>
         {children}
       <Footer></Footer>
       </body>

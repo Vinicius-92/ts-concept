@@ -30,7 +30,7 @@ export default function Promos() {
 
 
     return (
-        <div className="h-[460px] flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
+        <div id='promos' className="h-[460px] flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
             <div className="text-2xl lg:text-4xl lg:mx-36 lg:mt-36 flex flex-col lg:w-2/5 w-full text-center mt-3">
                 <strong className="bold">EXCLUSIVIDADE DA TS:</strong>
                 <p>OPORTUNIDADES</p>

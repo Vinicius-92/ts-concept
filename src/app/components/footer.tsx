@@ -3,7 +3,7 @@ export default function Footer() {
         <footer className="bg-black h-fit p-4 flex flex-col align-middle justify-center bottom-0">
             <div className="flex flex-row justify-center text-2xl">
                 <p className="pt-1">SIGA NOSSO INSTA</p>
-                <a href="">
+                <a href="https://www.instagram.com/tspneus/">
                     <img className="w-[38px] h-[38px] ml-3" src="ig-logo.svg"/>
                 </a>
             </div>
