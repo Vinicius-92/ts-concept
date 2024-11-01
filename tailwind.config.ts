@@ -11,8 +11,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
-    },
+        'ts-gray': "#151515"
+      }
+    }
   },
   plugins: [],
 };
