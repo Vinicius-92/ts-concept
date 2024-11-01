@@ -12,6 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'ts-gray': "#151515"
+      },
+      backgroundImage: {
+        'main': "url('../../public/main.jpg')"
+      },
+      fontFamily: {
+        sariaBold: ["SairaCondensed-Bold", "sans-serif"],
+        sariaBlack: ["SairaCondensed-Black", "sans-serif"]
       }
     }
   },

@@ -19,3 +19,17 @@ body {
   background: var(--background);
   font-family: var(--font-saira-regular), Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: 'SairaCondensed-Bold';
+  src: url('/fonts/SairaCondensed-Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'SairaCondensed-Black';
+  src: url('/fonts/SairaCondensed-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: bold;
+}
