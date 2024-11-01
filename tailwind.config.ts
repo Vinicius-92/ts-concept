@@ -15,7 +15,8 @@ const config: Config = {
       },
       backgroundImage: {
         'main': "url('../../public/main.jpg')",
-        'vans': "url('../../public/bg-apollo.jpg')"
+        'vans': "url('../../public/bg-apollo.jpg')",
+        'somos': "url('../../public/somos.png')"
       },
       fontFamily: {
         sariaBold: ["SairaCondensed-Bold", "sans-serif"],
