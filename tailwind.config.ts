@@ -14,7 +14,8 @@ const config: Config = {
         'ts-gray': "#151515"
       },
       backgroundImage: {
-        'main': "url('../../public/main.jpg')"
+        'main': "url('../../public/main.jpg')",
+        'vans': "url('../../public/bg-apollo.jpg')"
       },
       fontFamily: {
         sariaBold: ["SairaCondensed-Bold", "sans-serif"],

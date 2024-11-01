@@ -5,6 +5,7 @@ import Header from "./components/header"
 import Footer from "./components/footer";
 import MainHeader from "./components/main-header";
 import Promos from "./components/promos";
+import Vans from "./components/vans";
 
 const sairaRegular = localFont({
   src: "./fonts/SairaCondensed-Regular.ttf",
@@ -33,6 +34,7 @@ export default function RootLayout({
       <Header></Header>
       <MainHeader></MainHeader>
       <Promos></Promos>
+      <Vans></Vans>
         {children}
       <Footer></Footer>
       </body>

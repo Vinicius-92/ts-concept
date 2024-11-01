@@ -7,11 +7,7 @@ const images = [
     'promos/2.png',
     'promos/3.png',
     'promos/4.png',
-    'promos/5.png',
-    'promos/6.png',
-    'promos/7.png',
-    'promos/8.png',
-    'promos/9.png'
+    'promos/5.png'
   ];
 
 export default function Promos() {
@@ -64,7 +60,6 @@ export default function Promos() {
                         <img src='./double-chevron-right.webp' />
                     </button>
                     </div>
-                    
                 </div>
         </div>
     )
