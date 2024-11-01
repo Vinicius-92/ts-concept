@@ -1,7 +1,7 @@
 export default function Scripts() {
     return (
         <>
-            <script >
+            <script async>
                 {`
                     (function (c, l, a, r, i, t, y) {
                         c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -10,8 +10,8 @@ export default function Scripts() {
                     })(window, document, "clarity", "script", "iitv1n9nct");
                 `}
             </script>
-            <script src="https://www.googletagmanager.com/gtag/js?id=G-09WFWQ3MLW"></script>
-            <script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-09WFWQ3MLW"></script>
+            <script async>
                 {
                     `
                         window.dataLayer = window.dataLayer || [];

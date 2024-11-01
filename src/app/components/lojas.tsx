@@ -29,7 +29,7 @@ export default function Lojas() {
     }, []);
 
     return (
-        <div id='lojas' className="lg:h-[460px] h-[500px] flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
+        <div id='lojas' className="h-fit flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
             <div className="text-2xl lg:text-4xl lg:mx-36 lg:mt-36 flex flex-col lg:w-2/5 w-full text-center mt-3">
                 <strong className="bold">LOJAS TS:</strong>
                 <p>FÁCIL LOCALIZAÇAO</p>

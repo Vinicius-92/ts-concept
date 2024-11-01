@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+'use client';
+
+import { useState } from 'react';
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header"
@@ -10,6 +12,8 @@ import About from "./components/about";
 import Marcas from "./components/marcas";
 import Lojas from "./components/lojas";
 import Scripts from "./components/scripts";
+import Banners from "./components/banners";
+import Modal from './components/modal';
 
 const sairaRegular = localFont({
   src: "./fonts/SairaCondensed-Regular.ttf",
@@ -22,16 +26,11 @@ const sairaBold = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "TS Concept",
-  description: "TS Concept",
-};
+export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <html lang="en" className="bg-ts-gray overflow-x-hidden">
       <body className={`${sairaRegular.variable} ${sairaBold.variable} antialiased`}>
@@ -41,10 +40,17 @@ export default function RootLayout({
       <Header></Header>
       <MainHeader></MainHeader>
       <Promos></Promos>
+      <Banners></Banners>
       <Vans></Vans>
       <About></About>
       <Marcas></Marcas>
       <Lojas></Lojas>
+      <div className="relative">
+        <button onClick={openModal}>
+          <img className="fixed h-[70px] w-[70px] right-2 bottom-2" src="./whatsapp.png" alt="" />
+        </button>
+      </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal}></Modal>
         {children}
       <Footer></Footer>
       </body>

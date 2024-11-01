@@ -3,16 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --ts-gray: #151515 ;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -68,5 +61,17 @@ body {
 
   .custom-buttom:hover .icon-link-lp {
       color: white;
+  }
+}
+
+@media (max-width: 640px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .mobile {
+    display: none;
   }
 }

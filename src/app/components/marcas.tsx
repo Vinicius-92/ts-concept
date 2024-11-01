@@ -1,4 +1,13 @@
+'use client';
+
+import { useState } from 'react';
+import Modal from './modal';
+
 export default function Marcas() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
     return (
         <div className="bg-marcas h-[720px] lg:h-[470px] bg-fill items-center content-center ">
             <div className="flex flex-col items-center gap-10">
@@ -16,9 +25,10 @@ export default function Marcas() {
                             <img src="delinte-logo.png" alt="Logo da marca Delinte" />
                         </div>
                     </div>
-                    <a href="" type="button" className="custom-buttom text-4xl">
+                    <button onClick={openModal} className="custom-buttom text-4xl">
                         CONSULTE
-                    </a>
+                    </button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal}></Modal>
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Modal from './modal';
 
 const images = [
     'promos/1.png',
@@ -11,6 +12,11 @@ const images = [
   ];
 
 export default function Promos() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNextImage = () => {
@@ -30,22 +36,24 @@ export default function Promos() {
 
 
     return (
-        <div id='promos' className="h-[460px] flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
-            <div className="text-2xl lg:text-4xl lg:mx-36 lg:mt-36 flex flex-col lg:w-2/5 w-full text-center mt-3">
+        <div id='promos' className="h-fit flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
+            <div className="text-2xl lg:text-4xl lg:mx-22 lg:mt-16 flex flex-col lg:w-2/5 w-full text-center">
                 <strong className="bold">EXCLUSIVIDADE DA TS:</strong>
                 <p>OPORTUNIDADES</p>
                 <p>IMPERDÍVEIS</p>
-                <a href="" type="button" className="custom-buttom mx-auto">
+                <button onClick={openModal} type="button" className="custom-buttom mx-auto">
                     CONSULTE OUTRAS MEDIDAS
-                </a>
+                </button>
             </div>
-            <div className='lg:w-4/5 w-full 2xl:w-1/2 2xl:mt-1 mr-36 mt-8'>
+            <div className='lg:w-4/5 w-full 2xl:w-1/2 2xl:mt-1 ml-60'>
                 <div className="flex flex-col lg:flex-row">
                     <button onClick={goToPreviousImage}className="w-12 h-9 l-0 2xl:mt-52 mt-36 hidden md:block">
                         <img src='./double-chevron-left.webp' />
                     </button>
 
-                    <img src={images[currentIndex]} alt={`Banner ${currentIndex + 1}`} className="w-4/5 mx-auto" />
+                    <button className="w-8/12" onClick={openModal}>
+                        <img src={images[currentIndex]} alt={`Banner ${currentIndex + 1}`}  />
+                    </button>
 
                     <div className='md:hidden flex justify-center gap-10'>
                         <button onClick={goToPreviousImage}className="w-8">
@@ -61,6 +69,7 @@ export default function Promos() {
                     </button>
                     </div>
                 </div>
+                <Modal isOpen={isModalOpen} onClose={closeModal}></Modal>
         </div>
     )
 }
