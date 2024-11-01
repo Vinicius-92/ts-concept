@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --ts-gray: #151515 ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,14 +23,50 @@ body {
 
 @font-face {
   font-family: 'SairaCondensed-Bold';
-  src: url('/fonts/SairaCondensed-Bold.ttf') format('truetype');
+  src: url('/.fonts/SairaCondensed-Bold.ttf') format('truetype');
   font-weight: 900;
   font-style: bold;
 }
 
 @font-face {
   font-family: 'SairaCondensed-Black';
-  src: url('/fonts/SairaCondensed-Black.ttf') format('truetype');
+  src: url('./fonts/SairaCondensed-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: bold;
+}
+
+@layer components {
+  .linear-desktop {
+    background: linear-gradient(60deg, black 40%, var(--ts-gray) 40%);
+  }
+
+  .linear-mobile {
+    background: linear-gradient(180deg, black 40%, var(--ts-gray) 40%);
+  }
+
+  .bold {
+    font-family: 'SairaCondensed-Black';
+    font-style: black;
+  }
+
+  .custom-buttom {
+    border: 3px solid white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: white;
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    width: fit-content;
+  }
+
+  .custom-buttom:hover {
+    background-color: white;
+    color: black;
+}
+
+  .custom-buttom:hover .icon-link-lp {
+      color: white;
+  }
 }

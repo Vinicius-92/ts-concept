@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header"
 import Footer from "./components/footer";
 import MainHeader from "./components/main-header";
+import Promos from "./components/promos";
 
 const sairaRegular = localFont({
   src: "./fonts/SairaCondensed-Regular.ttf",
@@ -27,10 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-ts-gray">
+    <html lang="en" className="bg-ts-gray overflow-x-hidden">
       <body className={`${sairaRegular.variable} ${sairaBold.variable} antialiased`}>
       <Header></Header>
       <MainHeader></MainHeader>
+      <Promos></Promos>
         {children}
       <Footer></Footer>
       </body>
