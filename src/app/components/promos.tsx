@@ -34,24 +34,33 @@ export default function Promos() {
 
 
     return (
-        <div className="h-[460px] flex flex-row linear-mobile lg:linear-desktop">
-            <div className="text-4xl mx-36 mt-36 flex flex-col w-2/5">
+        <div className="h-[460px] flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
+            <div className="text-2xl lg:text-4xl lg:mx-36 lg:mt-36 flex flex-col lg:w-2/5 w-full text-center mt-3">
                 <strong className="bold">EXCLUSIVIDADE DA TS:</strong>
                 <p>OPORTUNIDADES</p>
                 <p>IMPERDÍVEIS</p>
-                <a href="" type="button" className="custom-buttom">
+                <a href="" type="button" className="custom-buttom mx-auto">
                     CONSULTE OUTRAS MEDIDAS
                 </a>
             </div>
-            <div className='w-4/5 2xl:w-1/2 2xl:mt-1 mr-36 mt-8'>
-                <div className="flex">
-                    <button onClick={goToPreviousImage}className="w-12 h-9 l-0 mt-36">
+            <div className='lg:w-4/5 w-full 2xl:w-1/2 2xl:mt-1 mr-36 mt-8'>
+                <div className="flex flex-col lg:flex-row">
+                    <button onClick={goToPreviousImage}className="w-12 h-9 l-0 2xl:mt-52 mt-36 hidden md:block">
                         <img src='./double-chevron-left.webp' />
                     </button>
 
-                    <img src={images[currentIndex]} alt={`Banner ${currentIndex + 1}`} className="w-4/5" />
+                    <img src={images[currentIndex]} alt={`Banner ${currentIndex + 1}`} className="w-4/5 mx-auto" />
 
-                    <button onClick={goToNextImage} className="w-12 h-9 mt-36 ml-3">
+                    <div className='md:hidden flex justify-center gap-10'>
+                        <button onClick={goToPreviousImage}className="w-8">
+                            <img src='./double-chevron-left.webp' />
+                        </button>
+                        <button onClick={goToNextImage} className="w-8">
+                        <img src='./double-chevron-right.webp' />
+                    </button>
+                    </div>
+
+                    <button onClick={goToNextImage} className="w-12 h-9 mt-36 2xl:mt-52 ml-3 hidden md:block">
                         <img src='./double-chevron-right.webp' />
                     </button>
                     </div>
