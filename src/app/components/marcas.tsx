@@ -9,11 +9,11 @@ export default function Marcas() {
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
     return (
-        <div className="bg-marcas h-[720px] lg:h-[470px] bg-fill items-center content-center ">
+        <div className="bg-marcas h-[470px] bg-fill items-center content-center ">
             <div className="flex flex-col items-center gap-10">
-                <p className="bold uppercase text-4xl text-center lg:w-3/5">o maior estoque de modelos e medidas a 
+                <p className="bold uppercase text-4xl text-center sm:pl-5 lg:pl-0 lg:w-3/5">o maior estoque de modelos e medidas a 
                 pronta entrega do interior paulista! </p>
-                <div className="flex flex-col gap-2">
+                <div className="flex w-11/12 lg:flex-col flex-row gap-2 justify-center lg:w-1/2">
                         <div className="flex lg:flex-row flex-col gap-3 lg:gap-0">
                             <img src="yokohama-logo.png" alt="Logo da marca Yokohama" />
                             <img src="continental-logo.png" alt="Logo da marca Continental" />

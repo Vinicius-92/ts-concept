@@ -30,25 +30,29 @@ export default function Lojas() {
 
     return (
         <div id='lojas' className="h-fit flex flex-col lg:flex-row linear-mobile lg:linear-desktop">
-            <div className="text-2xl lg:text-4xl lg:mx-36 lg:mt-36 flex flex-col lg:w-2/5 w-full text-center mt-3">
+            <div className="text-2xl sm:text-4xl lg:mx-36 lg:mt-36 flex flex-col lg:w-2/5 w-full text-center mt-3">
                 <strong className="bold">LOJAS TS:</strong>
                 <p>FÁCIL LOCALIZAÇAO</p>
                 <p>E ESTACIONAMENTO</p>
             </div>
-            <div className='lg:w-4/5 w-full 2xl:w-1/2 2xl:mt-1 mr-36 mt-8'>
+            <div className='lg:w-4/5 w-full 2xl:w-1/2 2xl:mt-1 mr-36 lg:mt-8'>
                 <div className="flex flex-col lg:flex-row">
-                    <button onClick={goToPreviousImage}className="w-12 h-9 l-0 2xl:mt-52 mt-48 mr-3 hidden md:block">
+                    <button onClick={goToPreviousImage}className="w-12 h-9 l-0 2xl:mt-52 mt-48 mr-3 hidden lg:block">
                         <img src='./double-chevron-left.webp' />
                     </button>
 
                     <div className='mt-12'>
                         <a href={images[currentIndex].whatsappLink} target='_blanck'>
-                            <img src={images[currentIndex].img} className="w-full mx-auto" />
+                            <img src={images[currentIndex].img} className="w-11/12 mx-auto lg:w-full" />
                         </a>
-                        <p className="w-10/12 md:w-full mx-auto text-lg"><span className='bold'>{images[currentIndex].nome}</span> <br className='md:hidden'/> {images[currentIndex].end}</p>
+                        <p className="w-11/12 lg:w-full mx-auto text-lg">
+                            <span className='bold'>{images[currentIndex].nome}</span> 
+                            <br className='md:hidden'/> 
+                            {images[currentIndex].end}
+                        </p>
                     </div>
 
-                    <div className='md:hidden flex justify-center gap-10 mt-3'>
+                    <div className='lg:hidden flex justify-center gap-10 mt-3'>
                         <button onClick={goToPreviousImage}className="w-8">
                             <img src='./double-chevron-left.webp' />
                         </button>
@@ -57,7 +61,7 @@ export default function Lojas() {
                     </button>
                     </div>
 
-                    <button onClick={goToNextImage} className="w-12 h-9 mt-48 2xl:mt-52 ml-3 hidden md:block">
+                    <button onClick={goToNextImage} className="w-12 h-9 mt-48 2xl:mt-52 ml-3 hidden lg:block">
                         <img src='./double-chevron-right.webp' />
                     </button>
                     </div>
