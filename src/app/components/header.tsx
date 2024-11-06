@@ -10,7 +10,7 @@ export default function Header() {
   };
 
   return (
-    <div className="bg-ts-gray h-52 mys-0">
+    <div className="bg-concept-gray h-52 mys-0">
         <div className="relative w-screen flex justify-center">
             <img src="logo-bg-header.png" className="z-0 min-w-[1000px] hidden lg:block"/>
             <img src="logo.png" className="my-2 min-w-[250px] mx-auto z-10 absolute mt-10 lg:mt-4" alt="Logo da Rede TS Pneus" />

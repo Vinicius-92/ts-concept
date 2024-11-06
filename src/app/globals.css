@@ -22,6 +22,12 @@ body {
 }
 
 @font-face {
+  font-family: 'SairaCondensed-SemiBold';
+  src: url('./fonts/SairaCondensed-SemiBold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'SairaCondensed-Black';
   src: url('./fonts/SairaCondensed-Black.ttf') format('truetype');
   font-weight: 900;
@@ -39,6 +45,11 @@ body {
 
   .bold {
     font-family: 'SairaCondensed-Black';
+    font-style: black;
+  }
+
+  .semibold {
+    font-family: 'SairaCondensed-SemiBold';
     font-style: black;
   }
 

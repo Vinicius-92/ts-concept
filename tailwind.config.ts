@@ -11,13 +11,17 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'ts-gray': "#151515"
+        'ts-gray': "#151515",
+        'concept-gray': '#252525'
       },
       backgroundImage: {
         'main': "url('../../public/main.jpg')",
         'vans': "url('../../public/bg-apollo.jpg')",
         'somos': "url('../../public/somos.png')",
-        'marcas': "url('../../public/pneus-bg.jpg')"
+        'marcas': "url('../../public/pneus-bg.jpg')",
+        'marcas-concept': "url('../../public/concept/brand-header.webp')",
+        'marcas-concept-mob': "url('../../public/concept/marcas-concept-mob.webp')",
+        'tire-brands-bg': "url('../../public/concept/tire-brands-bg.webp')"
       },
       fontFamily: {
         sariaBold: ["SairaCondensed-Bold", "sans-serif"],
