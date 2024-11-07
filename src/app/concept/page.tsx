@@ -1,12 +1,32 @@
+'use client'
+
+import { useState } from "react";
+import PneusModal from "./pneus-modal";
+import Modal from "../components/modal";
+
+let key = "";
+
 export default function Concept() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModal2Open, setIsModalOpen2] = useState(false);
+
+  const openModal = (value: string) => { setIsModalOpen(true), key = value };
+  const openModal2 = () => { setIsModalOpen2(true) }
+  const closeModal = () => setIsModalOpen(false);
+  const closeModal2 = () => setIsModalOpen2(false);
+
   return (
     <div className="w-screen h-screen bg-black flex flex-col">
       <div className="bg-concept-gray w-screen h-56 flex justify-center items-center flex-col lg:flex-row">
         <img className="w-[366px] h-[63px] invisible lg:visible" src="concept/inovacao.webp" alt="" />
         <img className="w-[176px] h-[178px] p-2" src="concept/logo-concept.png" alt="Logo Ts Concept" />
         <div className="flex items-center mb-16 place-content-center gap-2 bg-[#191919] w-screen pt-2 pb-2 lg:bg-concept-gray lg:w-fit lg:mb-0">
-          <img className="w-[31px] h-[31px]" src="concept/whatsapp.png" alt="Whatsapp logo" />
-          <img className="w-[31px] h-[31px]" src="concept/phone.png" alt="Logo Telefone" />
+          <button onClick={openModal2}>
+            <img className="w-[31px] h-[31px]" src="concept/whatsapp.png" alt="Whatsapp logo" />
+          </button>
+          <a href="tel:5508000177777">
+            <img className="w-[31px] h-[31px]" src="concept/phone.png" alt="Logo Telefone" />
+          </a>
           <img className="w-[227px] h-[19px]" src="concept/phone-number.png" alt="Número de telefone 0800 017 7777" />
         </div>
       </div>
@@ -14,15 +34,30 @@ export default function Concept() {
         <h1 className="uppercase text-center text-[20px] lg:text-[35px] md:w-1/2 lg:w-2/5 m-auto">selecione AQUI a marca do seu veículo</h1>
         <img className="h-[20px] w-[28px] m-auto" src="concept/down.png" alt="" />
         <div className="flex justify-center flex-wrap md:w-3/5 md:m-auto lg:w-screen">
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/vw.webp" alt="Logo Wolksvagen" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/honda.webp" alt="Logo Honda" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/toyota.webp" alt="Logo Toyota" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/chevro.webp" alt="Logo Chevrolet" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/peugeot.webp" alt="Logo Peugeot" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/jeep.webp" alt="Logo Jeep" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/bmw.webp" alt="Logo BMW" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/porsche.webp" alt="Logo Porsche" />
-          <img className="h-16 md:h-20 lg:h-auto" src="concept/mercedez.webp" alt="Logo Mercedez" />
+          <button onClick={() => {openModal('volkswagen')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/vw.webp" alt="Logo Wolksvagen" />
+          </button>
+          <button onClick={() => {openModal('honda')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/honda.webp" alt="Logo Honda" />
+          </button>
+          <button onClick={() => {openModal('toyota')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/toyota.webp" alt="Logo Toyota" />
+          </button>
+          <button onClick={() => {openModal('chevrolet')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/chevro.webp" alt="Logo Chevrolet" />
+          </button>
+          <button onClick={() => {openModal('peugeot')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/peugeot.webp" alt="Logo Peugeot" />
+          </button>
+          <button onClick={() => {openModal('jeep')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/jeep.webp" alt="Logo Jeep" />
+          </button>
+          <button onClick={() => {openModal('bmw')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/bmw.webp" alt="Logo BMW" />
+          </button>
+          <button onClick={() => {openModal('porsche')}}>
+            <img className="h-16 md:h-20 lg:h-auto" src="concept/porsche.webp" alt="Logo Porsche" />
+          </button>
         </div>
       </div>
       <div className="h-[630px] w-screen bg-cover bg-no-repeat bg-center bg-tire-brands-bg flex flex-col content-center pt-3 pb-3">
@@ -39,7 +74,7 @@ export default function Concept() {
           <img className="w-24 sm:w-48 lg:w-56" src="concept/bridgestone-logo.png" alt="Logo bridgestone" />
         </div>
         <div className="flex justify-center">
-          <button className="custom-buttom text-[20px]">ENTRE EM CONTATO</button>
+          <button onClick={openModal2} className="custom-buttom text-[20px]">ENTRE EM CONTATO</button>
         </div>
       </div>
       <div className="flex flex-col h-fit bg-white pt-10 pb-10">
@@ -87,9 +122,11 @@ export default function Concept() {
             <div className="flex flex-col justify-center place-items-center m-6">
                 <img className="sm:w-72" src="concept/logo-concept.png" />
                 <div className="flex items-center gap-3">
+                <a href="tel:5508000177777">
                   <img className="w-[31px] h-[31px]" src="concept/phone.png" alt="Logo Telefone" />
-                  <img className="w-[227px] h-[19px]" src="concept/phone-number.png" alt="Número de telefone 0800 017 7777" />
-                </div>
+                </a>
+                <img className="w-[227px] h-[19px]" src="concept/phone-number.png" alt="Número de telefone 0800 017 7777" />
+              </div>
             </div>
             <hr className="w-full" />
             <div className="flex flex-col w-10/12 mx-auto text-center m-3 text-lg lg:flex-row lg:place-content-between">
@@ -100,6 +137,8 @@ export default function Concept() {
                 </div>
             </div>
         </div>
-    </div>
+        <PneusModal isOpen={isModalOpen} onClose={closeModal} dataKey={key} whatsappModal={{  openModal: openModal2 }}></PneusModal>
+        <Modal key="whatsappModal" isOpen={isModal2Open} onClose={closeModal2}></Modal>
+        </div>
   );
 }

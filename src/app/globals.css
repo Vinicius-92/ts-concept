@@ -73,6 +73,12 @@ body {
   .custom-buttom:hover .icon-link-lp {
       color: white;
   }
+
+  .custom-buttom-concept {
+    border: 2px solid black;
+    padding: 5px 10px;
+    color: black;
+  }
 }
 
 @media (max-width: 640px) {
