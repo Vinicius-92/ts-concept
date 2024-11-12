@@ -337,7 +337,7 @@ export default class Data {
         }
     ]
 
-    private static brands: Map<String, Pneu[]> = new Map<String, Pneu[]>([
+    private static brands: Map<string, Pneu[]> = new Map<string, Pneu[]>([
         ['volkswagen', this.volkswagen],
         ['honda', this.honda],
         ['toyota', this.toyota],

@@ -14,7 +14,7 @@ import Banners from "./components/banners";
 import Modal from './components/modal';
 
 
-export default function Home({children}: Readonly<{children: React.ReactNode;}>) {
+export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -35,7 +35,6 @@ export default function Home({children}: Readonly<{children: React.ReactNode;}>)
         </button>
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal}></Modal>
-        {children}
       <Footer></Footer>
       <footer></footer>
     </div>
