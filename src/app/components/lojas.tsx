@@ -6,7 +6,7 @@ const images = [
     {img: 'lojas/limeira.jpg', end: "R. André Scarpa, 08, Jd. São Pedro - Limeira-SP", nome: "TS PNEUS LIMEIRA", whatsappLink: "https://api.whatsapp.com/send/?phone=5501934415051&text=Ol%C3%A1,%20vim%20do%20Site%20da%20TS%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"},
     {img: 'lojas/campinas.jpg', end: "R. Salto Grande, 55 - Jd. do Trevo", nome: "TS PNEUS CAMPINAS 1", whatsappLink: "https://api.whatsapp.com/send/?phone=5501921214067&text=Ol%C3%A1,%20vim%20do%20Site%20da%20TS%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"},
     {img: 'lojas/campinas-2.jpg', end: "R. Quatá, 78 - Jd. do Trevo", nome: "TS PNEUS CAMPINAS 2", whatsappLink: "https://api.whatsapp.com/send/?phone=5501921214067&text=Ol%C3%A1,%20vim%20do%20Site%20da%20TS%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"},
-    {img: 'lojas/pocos.jpg', end: "Av. Monsenhor Alderige, 44 - Jd. Country Club", nome: "TS PNEUS POÇOS DE CALDAS", whatsappLink: "https://api.whatsapp.com/send/?phone=5501908008782399&text=Ol%C3%A1,%20vim%20do%20Site%20da%20TS%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"},
+    {img: 'lojas/pocos.jpg', end: "Av. Monsenhor Alderige, 44 - Jd. Country Club", nome: "TS PNEUS POÇOS DE CALDAS", whatsappLink: "https://api.whatsapp.com/send/?phone=5508000177777&text=Ol%C3%A1,%20vim%20do%20Site%20da%20TS%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"},
     {img: 'lojas/paulinia.jpg', end: "EM BREVE", nome: "TS PNEUS SMART PAULÍNIA", whatsappLink: ""}
   ];
 
