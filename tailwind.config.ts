@@ -12,7 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'ts-gray': "#151515",
-        'concept-gray': '#252525'
+        'concept-gray': '#252525',
+        'roleta-laranja': '#ff9d00',
+        'roleta-amarela': '#ffc800'
       },
       backgroundImage: {
         'main': "url('../../public/main.jpg')",
@@ -21,7 +23,8 @@ const config: Config = {
         'marcas': "url('../../public/pneus-bg.jpg')",
         'marcas-concept': "url('../../public/concept/brand-header.webp')",
         'marcas-concept-mob': "url('../../public/concept/marcas-concept-mob.webp')",
-        'tire-brands-bg': "url('../../public/concept/tire-brands-bg.webp')"
+        'tire-brands-bg': "url('../../public/concept/tire-brands-bg.webp')",
+        'lp-main': "url('../../public/landing-pages/main.png')"
       },
       fontFamily: {
         sariaBold: ["SairaCondensed-Bold", "sans-serif"],
