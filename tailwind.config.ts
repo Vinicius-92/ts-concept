@@ -24,7 +24,9 @@ const config: Config = {
         'marcas-concept': "url('../../public/concept/brand-header.webp')",
         'marcas-concept-mob': "url('../../public/concept/marcas-concept-mob.webp')",
         'tire-brands-bg': "url('../../public/concept/tire-brands-bg.webp')",
-        'lp-main': "url('../../public/landing-pages/main.png')"
+        'lp-main': "url('../../public/landing-pages/main.png')",
+        'lp-aros-main': "url('../../public/landing-pages/aros/main.jpg')",
+        'lp-runflat-main': "url('../../public/landing-pages/run-flat/main.png')"
       },
       fontFamily: {
         sariaBold: ["SairaCondensed-Bold", "sans-serif"],

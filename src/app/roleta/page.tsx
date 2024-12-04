@@ -1,32 +1,40 @@
 'use client'
 
-import { useEffect } from 'react';
-
-
 export default function Roleta() {
 
     function changeImageActive(containerId: string) {
         const container: HTMLElement = document.getElementById(containerId)!;
-
-        for (let i = 0; i < container.children.length + 1; i++) {
-            if (container.children.item(i)?.classList.contains('active')) {
+         
+        for (let i = 0; i < container.children.length; i++) {
+            if(container.children.item(i)?.classList.contains('active')) {
                 container.children.item(i)?.classList.remove('active')
-                if (i == container.children.length) { 
-                    i = -1
-                };
-                container.children.item(i + 1)?.classList.add('active')
+                activateNextOne(container, i)
+                break;
             }
-        };
-        console.log(container.childNodes.item(1))
-        // container.childNodes.forEach(node => {
-        //     console.log(typeof node)
-        // })
+            
+        }
+    }
+
+    function activateNextOne(container: HTMLElement, index: number): void {
+        console.log(container)
+        console.log(index)
+        switch(index) {
+            case 0:
+                container.children.item(1)?.classList.add('active')
+                break;
+            case 1:
+                container.children.item(2)?.classList.add('active')
+                break;
+            case 2:
+                container.children.item(0)?.classList.add('active')
+                break;
+        }
     }
 
     function change() {
         changeImageActive('image-container-1')
-        // changeImageActive('image-container-2')
-        // changeImageActive('image-container-3')
+        changeImageActive('image-container-2')
+        changeImageActive('image-container-3')
     }
 
 

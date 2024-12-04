@@ -1,8 +1,8 @@
 export default class Utils {
     static toPascalCase(value: string): string {
-        let arr = value.split(' ');
+        const arr = value.split(' ');
         arr.forEach(item => {
-            let aux = item.charAt(0)
+            const aux = item.charAt(0)
             arr[arr.indexOf(item)] = item.replace(/^./, aux.toUpperCase())
         }) 
         return arr.join(' ');

@@ -1,4 +1,4 @@
-import { Info, Data } from "../cidadesInfo"
+import { Data } from "../cidadesInfo"
 
 export default function LpBanner(data: Data) {
     return (

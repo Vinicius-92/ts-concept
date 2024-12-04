@@ -1,0 +1,20 @@
+User-agent: *
+Disallow:
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /scripts/
+
+User-agent: BadBot
+Disallow: /
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: *
+Disallow: /*.txt$
+
+User-agent: *
+Disallow: /secret.html
+Disallow: /config.js
