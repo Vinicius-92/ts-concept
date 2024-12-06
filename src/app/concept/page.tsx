@@ -3,6 +3,7 @@
 import { useState } from "react";
 import PneusModal from "./pneus-modal";
 import Content from "./content";
+import Scripts from "../components/scripts";
 
 let key = "";
 
@@ -17,12 +18,17 @@ export default function Concept() {
 
   return (
     <>
-      <div>
-        <Content open={open} lockOverflow={isModalOpen}></Content>
-      </div>
-      <div>
-          <PneusModal isOpen={isModalOpen} onClose={closeModal} dataKey={key}></PneusModal>
-      </div>
+    <body>
+        <header>
+          <Scripts></Scripts>
+        </header>
+        <div>
+          <Content open={open} lockOverflow={isModalOpen}></Content>
+        </div>
+        <div>
+            <PneusModal isOpen={isModalOpen} onClose={closeModal} dataKey={key}></PneusModal>
+        </div>
+      </body>
     </>
   );
 }

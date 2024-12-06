@@ -2,39 +2,66 @@
 
 export default function Roleta() {
 
-    function changeImageActive(containerId: string) {
-        const container: HTMLElement = document.getElementById(containerId)!;
-         
+    function changeImageActive() {
+        const cont1 = () => makeTheForLoop(document.getElementById('image-container-1')!)
+        const cont2 = () => makeTheForLoop(document.getElementById('image-container-2')!)
+        const cont3 = () => makeTheForLoop(document.getElementById('image-container-3')!)
+
+        setTimeout(cont1, 25)
+        setTimeout(cont2, 200)
+        setTimeout(cont3, 350)
+    }
+
+    function makeTheForLoop(container: HTMLElement) {
         for (let i = 0; i < container.children.length; i++) {
             if(container.children.item(i)?.classList.contains('active')) {
                 container.children.item(i)?.classList.remove('active')
+                container.children.item(i)?.classList.remove('translate-y-1')
                 activateNextOne(container, i)
                 break;
             }
-            
         }
+    }
+
+    function callFunctionRepeatedly(func: Function, times: number, delay: number) {
+        let count = 0; 
+        function call() {
+            if (count < times) {
+                func();
+                count++;
+                if(count < times / 3) {
+                    setTimeout(call, delay);
+                } else if (count >  times / 3 && count < times / 3 * 2){
+                    setTimeout(call, delay * 2);
+                } else {
+                    setTimeout(call, delay * 4)
+                }
+            }
+        }
+        call()
     }
 
     function activateNextOne(container: HTMLElement, index: number): void {
-        console.log(container)
-        console.log(index)
         switch(index) {
             case 0:
                 container.children.item(1)?.classList.add('active')
+                container.children.item(1)?.classList.add('translate-y-1')
                 break;
             case 1:
                 container.children.item(2)?.classList.add('active')
+                container.children.item(2)?.classList.add('translate-y-1')
                 break;
             case 2:
                 container.children.item(0)?.classList.add('active')
+                container.children.item(0)?.classList.add('translate-y-1')
                 break;
         }
     }
 
+
+
     function change() {
-        changeImageActive('image-container-1')
-        changeImageActive('image-container-2')
-        changeImageActive('image-container-3')
+        callFunctionRepeatedly(changeImageActive, 100, 50)    
     }
 
 
@@ -45,17 +72,17 @@ export default function Roleta() {
                 <div className="absolute top-72 mt-3 ml-2" >
                     <div className="flex ml-24 gap-10">
                         <div className="image-container" id="image-container-1">
-                            <img className="relative h-[65px] active" src="slot/premio-ts.webp" />
+                            <img className="relative h-[65px] active translate-y-1" src="slot/premio-ts.webp" />
                             <img className="relative h-[65px]" src="slot/premio-ts.webp" />
                             <img className="relative h-[70px] pl-1" src="slot/premio.png" />
                         </div>
                         <div className="image-container" id="image-container-2">
-                            <img className="relative h-[65px] active" src="slot/premio-ts.webp" />
+                            <img className="relative h-[65px] active translate-y-1" src="slot/premio-ts.webp" />
                             <img className="relative h-[65px]" src="slot/premio-ts.webp" />
                             <img className="relative h-[70px] pl-1" src="slot/premio.png" />
                         </div>
                         <div className="image-container" id="image-container-3">
-                            <img className="relative h-[65px] active" src="slot/premio-ts.webp" />
+                            <img className="relative h-[65px] active translate-y-1" src="slot/premio-ts.webp" />
                             <img className="relative h-[65px]" src="slot/premio-ts.webp" />
                             <img className="relative h-[70px] pl-1" src="slot/premio.png" />
                         </div>

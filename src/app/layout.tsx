@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Scripts from "./components/scripts";
 import { Metadata } from 'next';
 
 
@@ -22,13 +21,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
   return (
-    <html lang="en" className="bg-ts-gray overflow-x-hidden">
-      <body className={`${sairaRegular.variable} ${sairaBold.variable} antialiased`}>
-      <header>
-        <Scripts></Scripts>
-      </header>
-        {children}
-      </body>
+    <html lang="en" className={`bg-ts-gray overflow-x-hidden ${sairaRegular.variable} ${sairaBold.variable} antialiased`}>
+      {children}
     </html>
   );
 }

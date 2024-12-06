@@ -188,5 +188,5 @@ path.two {
 }
 
 .active {
-  display: block !important;
+  display: inherit !important;
 }
